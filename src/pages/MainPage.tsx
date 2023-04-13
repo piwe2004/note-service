@@ -18,7 +18,7 @@ function MainPage() {
             axios.post("/tmp", {
                 content:edit
             });
-    });
+    },[edit]);
 
     const handleSubmit = useCallback(async()=>{
         if(edit.replace(/<[/\w\s"=-]*>/gi, "").length === 0){            
